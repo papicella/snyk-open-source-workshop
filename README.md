@@ -6,14 +6,14 @@ Snyk's GitHub integration allows developers to easily onboard their GitHub repos
 
 In this **hands-on** demo we will achieve the follow
 
-* Fork the highly vulnerable Goof Application
-* Configure GitHub Integration
-* Find vulnerabilities
-* Fix using a Pull Request
-* Test using the CLI (test and monitor)
-* Failing using Exit Codes
-* Viewing Dashboard Reports
-* IDE integration VS Code
+* Step 1 - Fork the highly vulnerable Goof Application
+* Step 2 - Configure GitHub Integration
+* Step 3 - Find vulnerabilities
+* Step 4 - Fix using a Pull Request
+* Step 5 - Test using the CLI (test and monitor)
+* Step 6 - Failing using Exit Codes
+* Step 7 - Viewing Dashboard Reports
+* Step 8 - IDE integration VS Code
 
 ## Prerequisites
 
@@ -26,17 +26,34 @@ In this **hands-on** demo we will achieve the follow
 
 _Note: It is assumed your using a mac for these steps but it should also work on windows or linux with some modifications to the scripts potentially_
 
-## Configure GitHub Integration
+## Step 1 Fork the highly vulnerable Goof Application
 
-First we need to connect Snyk to GitHub so we can import our Repository. Do so by:
+## Step 2 - Configure GitHub Integration
+
+- First we need to connect Snyk to GitHub so we can import our Repository. Do so by:
+
 Login to http://app.snyk.io Sign up if you haven't already.
 Navigating to Integrations -> Source Control -> GitHub
-
 Fill in your Account Credentials to Connect your GitHub Account.
 
 ![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png)
 
+## Step 3 - Find vulnerabilities
 
+
+## Step 4 - Fix using a Pull Request
+
+
+## Step 5 - Test using the CLI (test and monitor)
+
+
+## Step 6 - Failing using Exit Codes
+
+
+## Step 7 - Viewing Dashboard Reports
+
+
+## Step 8 - IDE integration VS Code
 
 Thanks for attending and completing this workshop
 

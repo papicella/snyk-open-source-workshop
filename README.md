@@ -1,4 +1,4 @@
-# Snyk Starter Open Source Workshop
+# Introduction to Snyk Open Source Workshop
 
 Snyk is an open source security platform designed to help software-driven businesses enhance developer security. Snyk's dependency scanner makes it the only solution that seamlessly and proactively finds, prioritizes and fixes vulnerabilities and license violations in open source dependencies
 
@@ -58,7 +58,21 @@ Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as 
 
 ## Step 4 - Fix using a Pull Request
 
-First let's explore the Goof project risks by clicking on the "package.json" file which is the manifest file for the open source dependencies used in the code
+First let's explore the Goof project risks by clicking on the "**package.json**" file which is the manifest file for the open source dependencies are declared. 
+
+* Click on "**package.json**"
+
+![alt tag](https://i.ibb.co/THs4g5q/snyk-starter-open-source-4.png)
+
+For each Vulnerability, Snyk displays the following ordered by our [Proprietary Priority Score](https://snyk.io/blog/snyk-priority-score/) :
+1. The module that introduced it and, in the case of transitive dependencies, its direct dependency,
+1. Details on the path and proposed Remediation, as well as the specific vulnerable functions
+1. Overview
+1. Exploit maturity
+1. Links to CWE, CVE and CVSS Score
+1. Plus more ...
+
+![alt tag](https://i.ibb.co/LYm0fVf/snyk-starter-open-source-5.png)
 
 
 

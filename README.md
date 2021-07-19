@@ -178,11 +178,70 @@ Tip: Run `snyk wizard` to address these issues.
 
 ## Step 6 - Failing using Exit Codes
 
+On typical Unix and Linux systems, programs would be able to pass a value to their parent processes while terminating. Values like these are referred to as Exit codes
+As part of Snyk output you must have seen Snyk process terminating with exit codes, we typically see
+
+1. Exit code 0 This means Snyk did not find vulnerabilities in your code an exited the process without failing the job.
+1. Exit code 1 This means Snyk found vulnerabilities in your code and have failed the build
+1. Exit code 2 This means Snyk exited with an error, please re-run with `-d` to see further information.
+1. Exit code 3 This means Snyk did not detect any supported projects/manifests to scan. Re-check the command or if the command should run in a different directory.
+
+* Create a script called "**goof-break-build-for-CRITICAL.sh**" as follows 
+
+```bash
+#!/bin/bash
+
+snyk test ./goof --severity-threshold=critical
+
+exit_code=$?
+
+echo ""
+echo "snyk cli test exit code equals = $exit_code "
+echo ""
+
+if [ $exit_code -eq 1 ]
+then
+  echo "*****"
+  echo "Build step has to fail we found at least 1 CRITICAL issue with the goof application .. "
+  echo "****"
+fi
+```
+
+* Run it from one directory level back from "**goof**" as shown below. You will see that from the exit code we have identified at least 1 critical issue exists and so we must fail the build
+
+```
+$ ./goof-break-build-for-CRITICAL.sh
+
+Testing ./goof...
+
+Tested 553 dependencies for known issues, found 4 issues, 13 vulnerable paths.
+
+.....
+
+snyk cli test exit code equals = 1
+
+*****
+Build step has to fail we found at least 1 CRITICAL issue with the goof application ..
+****
+```
+
+[Failing with Exit Codes](https://support.snyk.io/hc/en-us/articles/360006786558-Failing-with-exit-code-Generic-Error)
 
 ## Step 7 - Viewing Dashboard Reports
 
+The Reports area offers data and analytics across all of your projects, displaying historical and aggregated data about projects, issues, dependencies, and licenses. Data in each of the four tabs (seen below) is displayed based on the organization in which you are working, and you can filter this data with different parameters depending on the tab you're viewing
+
+* Click on the "Reports" link at the top of the Snyk App UI page's toolbar. You may need to wait briefly while the report page displays
+
+![alt tag](https://i.ibb.co/wNs3JC1/snyk-starter-open-source-11.png)
 
 ## Step 8 - IDE integration VS Code
+
+Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**goof**" code within VS code while in an IDE
+
+* Install it using the following link - [Install VS Code Snyk Plugin](https://marketplace.visualstudio.com/items?itemName=snyk-security.vscode-vuln-cost)
+
+![alt tag](https://i.ibb.co/zHZ3qxv/snyk-starter-open-source-12.png)
 
 
 Thanks for attending and completing this workshop

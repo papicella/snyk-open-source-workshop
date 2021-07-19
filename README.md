@@ -74,7 +74,26 @@ For each Vulnerability, Snyk displays the following ordered by our [Proprietary 
 
 ![alt tag](https://i.ibb.co/LYm0fVf/snyk-starter-open-source-5.png)
 
+When using the GitHub integration, and if a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request. 
 
+* Click on "Fix this vulnerability" for "**typeorm Prototype Pollution**" issue a shown below
+
+![alt tag](https://i.ibb.co/sRJjfnC/snyk-starter-open-source-6.png)
+
+* On the next screen, you'll be able to confirm the issue to fix with this PR. Click "Open a Fix PR"
+
+![alt tag](https://i.ibb.co/w7m8HPv/snyk-starter-open-source-7.png)
+![alt tag](https://i.ibb.co/J7MmSQc/snyk-starter-open-source-8.png)
+
+* Once it's ready, you'll be taken to the PR in GitHub, where you can review the changes in the file diff view:
+
+![alt tag](https://i.ibb.co/P6bcxkh/snyk-starter-open-source-9.png)
+
+* We see that CI checks completed successfully, assuring us we didn't introduce a breaking change
+
+![alt tag](https://i.ibb.co/SPMCMpP/snyk-starter-open-source-10.png)
+
+* Optionally Now, go ahead and merge the PR!
 
 ## Step 5 - Test using the CLI (test and monitor)
 

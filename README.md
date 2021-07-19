@@ -6,7 +6,8 @@ Snyk's GitHub integration allows developers to easily onboard their GitHub repos
 
 In this **hands-on** demo we will achieve the follow
 
-* Step 1 - Fork the highly vulnerable Goof Application
+* [Step 1 Fork the highly vulnerable Goof Application](#step-1-fork-the-highly-vulnerable-goof-application)
+* Step 1 Fork the highly vulnerable Goof Application
 * Step 2 - Configure GitHub Integration
 * Step 3 - Find vulnerabilities
 * Step 4 - Fix using a Pull Request

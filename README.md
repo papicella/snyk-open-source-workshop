@@ -20,7 +20,7 @@ In this **hands-on** demo we will achieve the follow
 * public GitHub account - http://github.com
 * git client - https://git-scm.com/downloads
 * snyk CLI - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
-* Regisitered account on Snyk App - http://app.snyk.io
+* Registered account on Snyk App - http://app.snyk.io
 
 # Workshop Steps
 

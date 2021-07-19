@@ -175,6 +175,21 @@ Licenses:          enabled
 
 Tip: Run `snyk wizard` to address these issues.
 ```
+* We can instruct the Sny App to actually monitor our code in the UI as shown below, so run "**snyk monitor**" to achieve that. 
+
+```bash
+$ snyk monitor
+
+Monitoring /Users/pasapicella/snyk/SE/workshops/snyk-starter-open-source/goof (goof)...
+
+Explore this snapshot at https://app.snyk.io/org/workshops-admin-org/project/7709e818-d3a2-41ee-9aec-5ddc35321b50/history/204008e7-d79f-4215-8c48-544ea8bee921
+
+Notifications about newly disclosed issues related to these dependencies will be emailed to you.
+```
+
+* Returning to the Snyk App UI will show our CLI "snyk monitor" result BUT this time we didn't use the GitHub integration
+
+![alt tag](https://i.ibb.co/RzNHq8F/snyk-starter-open-source-13.png)
 
 ## Step 6 - Failing using Exit Codes
 

@@ -7,19 +7,18 @@ Snyk's GitHub integration allows developers to easily onboard their GitHub repos
 In this **hands-on** demo we will achieve the follow
 
 * [Step 1 Fork the highly vulnerable Goof Application](#step-1-fork-the-highly-vulnerable-goof-application)
-* Step 1 Fork the highly vulnerable Goof Application
-* Step 2 - Configure GitHub Integration
-* Step 3 - Find vulnerabilities
-* Step 4 - Fix using a Pull Request
-* Step 5 - Test using the CLI (test and monitor)
-* Step 6 - Failing using Exit Codes
-* Step 7 - Viewing Dashboard Reports
-* Step 8 - IDE integration VS Code
+* [Step 2 Configure GitHub Integration](#step-2-configure-gitHub-integration)
+* [Step 3 Find vulnerabilities](#step-3-find-vulnerabilities)
+* [Step 4 Fix using a Pull Request](#step-4-fix-using-a-pull-request)
+* [Step 5 Test using the CLI](#step-5-test-using-the-cli)
+* [Step 6 Failing using Exit Codes](#step-6-failing-using-exit-codes)
+* [Step 7 Viewing Dashboard Reports](#step-7-viewing-dashboard-reports)
+* [Step 8 IDE integration VS Code](#step-8-ide-integration-vs-code)
 
 ## Prerequisites
 
 * public GitHub account - http://github.com
-* git client - 
+* git client - https://git-scm.com/downloads
 * snyk CLI - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
 * Regisitered account on Snyk App - http://app.snyk.io
 
@@ -37,7 +36,7 @@ Navigate to the following GitHub repo - https://github.com/snyk/goof
 
 ![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-2.png)
 
-## Step 2 - Configure GitHub Integration
+## Step 2 Configure GitHub Integration
 
 First we need to connect Snyk to GitHub so we can import our Repository. Do so by:
 
@@ -47,7 +46,7 @@ First we need to connect Snyk to GitHub so we can import our Repository. Do so b
 
 ![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png)
 
-## Step 3 - Find vulnerabilities
+## Step 3 Find vulnerabilities
 
 Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as a Project.
 
@@ -57,7 +56,7 @@ Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as 
 
 ![alt tag](https://i.ibb.co/q9Rsxsh/snyk-starter-open-source-3.png)
 
-## Step 4 - Fix using a Pull Request
+## Step 4 Fix using a Pull Request
 
 First let's explore the Goof project risks by clicking on the "**package.json**" file which is the manifest file for the open source dependencies are declared. 
 
@@ -97,7 +96,7 @@ When using the GitHub integration, and if a fix is available, Snyk can automatic
 * Optionally Now, go ahead and merge the PR!
 * Back in Snyk, we can appreciate that our package.json file has 1 less High Severity Vulnerability if you did fix it
 
-## Step 5 - Test using the CLI (test and monitor)
+## Step 5 Test using the CLI
 
 In addition to the Snyk App UI we also have, snyk - CLI and build-time tool to find & fix known vulnerabilities in open-source dependencies. The CLI is what is used in DevOps pipelines to introduce Application Security Scans as part of that workflow to push applications into production. 
 
@@ -192,7 +191,7 @@ Notifications about newly disclosed issues related to these dependencies will be
 
 ![alt tag](https://i.ibb.co/RzNHq8F/snyk-starter-open-source-13.png)
 
-## Step 6 - Failing using Exit Codes
+## Step 6 Failing using Exit Codes
 
 On typical Unix and Linux systems, programs would be able to pass a value to their parent processes while terminating. Values like these are referred to as Exit codes
 As part of Snyk output you must have seen Snyk process terminating with exit codes, we typically see
@@ -243,7 +242,7 @@ Build step has to fail we found at least 1 CRITICAL issue with the goof applicat
 
 [Failing with Exit Codes](https://support.snyk.io/hc/en-us/articles/360006786558-Failing-with-exit-code-Generic-Error)
 
-## Step 7 - Viewing Dashboard Reports
+## Step 7 Viewing Dashboard Reports
 
 The Reports area offers data and analytics across all of your projects, displaying historical and aggregated data about projects, issues, dependencies, and licenses. Data in each of the four tabs (seen below) is displayed based on the organization in which you are working, and you can filter this data with different parameters depending on the tab you're viewing
 
@@ -251,7 +250,7 @@ The Reports area offers data and analytics across all of your projects, displayi
 
 ![alt tag](https://i.ibb.co/wNs3JC1/snyk-starter-open-source-11.png)
 
-## Step 8 - IDE integration VS Code
+## Step 8 IDE integration VS Code
 
 Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**goof**" code within VS code while in an IDE
 

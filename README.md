@@ -6,7 +6,14 @@ Snyk's GitHub integration allows developers to easily onboard their GitHub repos
 
 In this **hands-on** demo we will achieve the follow
 
-* TODO://
+* Fork the highly vulnerable Goof Application
+* Configure GitHub Integration
+* Find vulnerabilities
+* Fix using a Pull Request
+* Test using the CLI (test and monitor)
+* Failing using Exit Codes
+* Viewing Dashboard Reports
+* IDE integration VS Code
 
 ## Prerequisites
 
@@ -19,8 +26,15 @@ In this **hands-on** demo we will achieve the follow
 
 _Note: It is assumed your using a mac for these steps but it should also work on windows or linux with some modifications to the scripts potentially_
 
+## Configure GitHub Integration
 
-https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png
+First we need to connect Snyk to GitHub so we can import our Repository. Do so by:
+Login to http://app.snyk.io Sign up if you haven't already.
+Navigating to Integrations -> Source Control -> GitHub
+
+Fill in your Account Credentials to Connect your GitHub Account.
+
+![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png)
 
 
 

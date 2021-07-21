@@ -240,7 +240,7 @@ total 36168
 drwxr-xr-x  24 pasapicella  staff       768 19 Jul 15:33 goof/
 -rwxr-xr-x   1 pasapicella  staff       302 21 Jul 11:52 goof-break-build-for-CRITICAL.sh*
 
-$ ./goof-break-build-for-CRITICAL.sh
+pasapicella@192-168-1-113:~/snyk/SE/workshops/snyk-starter-open-source$ ./goof-break-build-for-CRITICAL.sh
 
 Testing ./goof...
 

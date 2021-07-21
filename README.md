@@ -18,7 +18,7 @@ In this **hands-on** demo we will achieve the follow
 ## Prerequisites
 
 * public GitHub account - http://github.com
-* git client - https://git-scm.com/downloads
+* git CLI - https://git-scm.com/downloads
 * snyk CLI - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
 * Registered account on Snyk App - http://app.snyk.io
 
@@ -55,6 +55,10 @@ Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as 
 * Click on the Repo you forked.
 
 ![alt tag](https://i.ibb.co/q9Rsxsh/snyk-starter-open-source-3.png)
+
+_Note: The import can take up to one minute so you can view the import log while it's running as shown below_
+
+![alt tag](https://i.ibb.co/RQsX6jZ/snyk-starter-open-source-14.png)
 
 ## Step 4 Fix using a Pull Request
 
@@ -175,7 +179,7 @@ Licenses:          enabled
 
 Tip: Run `snyk wizard` to address these issues.
 ```
-* We can instruct the Sny App to actually monitor our code in the UI as shown below, so run "**snyk monitor**" to achieve that. 
+* We can instruct the Snyk App to actually monitor our code in the UI as shown below, so run "**snyk monitor**" to achieve that. 
 
 ```bash
 $ snyk monitor
@@ -222,9 +226,20 @@ then
 fi
 ```
 
-* Run it from one directory level back from "**goof**" as shown below. You will see that from the exit code we have identified at least 1 critical issue exists and so we must fail the build
+* Make the script executable as shown below
+  
+```bash
+$ chmod +x goof-break-build-for-CRITICAL.sh
+```
+
+* Run it from one directory level back from "**goof**" directory source code as shown below. You will see that from the exit code we have identified at least 1 critical issue exists and so we must fail the build
 
 ```
+pasapicella@192-168-1-113:~/snyk/SE/workshops/snyk-starter-open-source$ d
+total 36168
+drwxr-xr-x  24 pasapicella  staff       768 19 Jul 15:33 goof/
+-rwxr-xr-x   1 pasapicella  staff       302 21 Jul 11:52 goof-break-build-for-CRITICAL.sh*
+
 $ ./goof-break-build-for-CRITICAL.sh
 
 Testing ./goof...

@@ -34,7 +34,7 @@ Navigate to the following GitHub repo - https://github.com/snyk/goof
 * Ensure you are forking this repo to your public GitHub account 
 * Click done
 
-![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-2.png)
+![alt tag](https://i.ibb.co/Gdf7N2W/snyk-starter-open-source-2.png)
 
 ## Step 2 Configure GitHub Integration
 

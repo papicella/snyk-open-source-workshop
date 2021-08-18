@@ -22,6 +22,8 @@ In this **hands-on** demo we will achieve the follow
 * snyk CLI - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
 * Registered account on Snyk App - http://app.snyk.io
 
+_NOTE: Please ensure you have meet the Prerequisites prior to starting this workshop_ 
+
 # Workshop Steps
 
 _Note: It is assumed your using a mac for these steps but it should also work on windows or linux with some modifications to the scripts potentially_

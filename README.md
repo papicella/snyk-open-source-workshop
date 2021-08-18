@@ -104,6 +104,16 @@ When using the GitHub integration, and if a fix is available, Snyk can automatic
 
 In addition to the Snyk App UI we also have, snyk - CLI and build-time tool to find & fix known vulnerabilities in open-source dependencies. The CLI is what is used in DevOps pipelines to introduce Application Security Scans as part of that workflow to push applications into production. 
 
+* Before we get started please make sure you have setup the Snyk CLI. There are various install options as per the links below. Using the prebuilt binaries means you don't have to install NPM to install the Snyk CLI.
+ 
+1. Install Page - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
+1. Prebuilt Binaries - https://github.com/snyk/snyk/releases
+
+```bash
+$ snyk --version
+1.675.0
+```
+
 * Authorize the snyk CLI with your account as follows
 
 ```bash

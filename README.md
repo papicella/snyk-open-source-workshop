@@ -30,6 +30,8 @@ _Note: It is assumed your using a mac for these steps but it should also work on
 
 ## Step 1 Fork the highly vulnerable Goof Application
 
+_NOTE: You may have already forked the Goopf application in that case go ahead and skip this step_
+
 Navigate to the following GitHub repo - https://github.com/snyk/goof
 
 * Click on the "**Fork**" button
@@ -40,7 +42,9 @@ Navigate to the following GitHub repo - https://github.com/snyk/goof
 
 ## Step 2 Configure GitHub Integration
 
-First we need to connect Snyk to GitHub so we can import our Repository. Do so by:
+_NOTE: You may have already setup GitHub integration in that case go ahead and skip this step_
+
+First we need to connect Snyk to GitHub so we can import our Repository. Do so by following these steps below:
 
 * Login to http://app.snyk.io Sign up if you haven't already.
 * Navigating to Integrations -> Source Control -> GitHub
@@ -64,8 +68,65 @@ _Note: The import can take up to one minute so you can view the import log while
 
 ## Step 4 Fix using a Pull Request
 
-First let's explore the Goof project risks by clicking on the "**package.json**" file which is the manifest file for the open source dependencies are declared. 
+First let's explore the Goof project risks by clicking on the "**package.json**" file which is the manifest file where the open source dependencies are declared. 
 
+`package.json`
+
+```json
+{
+  "name": "goof",
+  "version": "1.0.1",
+  "description": "A vulnerable todo demo application",
+  "homepage": "https://snyk.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Snyk/snyk-todo-list-demo-app/"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "build": "browserify -r jquery > public/js/bundle.js",
+    "cleanup": "mongo express-todo --eval 'db.todos.remove({});'",
+    "test": "snyk test"
+  },
+  "dependencies": {
+    "adm-zip": "0.4.7",
+    "body-parser": "1.9.0",
+    "cfenv": "^1.0.4",
+    "consolidate": "0.14.5",
+    "cookie-parser": "1.3.3",
+    "dustjs-helpers": "1.5.0",
+    "dustjs-linkedin": "2.5.0",
+    "ejs": "1.0.0",
+    "ejs-locals": "1.0.2",
+    "errorhandler": "1.2.0",
+    "express": "4.12.4",
+    "express-fileupload": "0.0.5",
+    "file-type": "^8.1.0",
+    "humanize-ms": "1.0.1",
+    "jquery": "^2.2.4",
+    "lodash": "4.17.4",
+    "marked": "0.3.5",
+    "method-override": "latest",
+    "moment": "2.15.1",
+    "mongodb": "^3.5.9",
+    "mongoose": "4.2.4",
+    "morgan": "latest",
+    "ms": "^0.7.1",
+    "mysql": "^2.18.1",
+    "npmconf": "0.0.24",
+    "optional": "^0.1.3",
+    "st": "0.2.4",
+    "stream-buffers": "^3.0.1",
+    "tap": "^11.1.3",
+    "typeorm": "^0.2.24"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "snyk": "^1.244.0"
+  },
+  "license": "Apache-2.0"
+}
+```
 * Click on "**package.json**"
 
 ![alt tag](https://i.ibb.co/THs4g5q/snyk-starter-open-source-4.png)

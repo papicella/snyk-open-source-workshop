@@ -143,16 +143,18 @@ For each Vulnerability, Snyk displays the following ordered by our [Proprietary 
 
 When using the GitHub integration, and if a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request. 
 
-* Click on "Fix this vulnerability" for "**typeorm Prototype Pollution**" issue a shown below
+* Click on "**Fix this vulnerability**" for "**typeorm Prototype Pollution**" issue as shown below
 
 ![alt tag](https://i.ibb.co/sRJjfnC/snyk-starter-open-source-6.png)
 
-* On the next screen, you'll be able to confirm the issue to fix with this PR. Click "Open a Fix PR"
+* On the next screen, you'll be able to confirm the issue to fix with this PR. Click "**Open a Fix PR**"
 
 ![alt tag](https://i.ibb.co/w7m8HPv/snyk-starter-open-source-7.png)
 ![alt tag](https://i.ibb.co/J7MmSQc/snyk-starter-open-source-8.png)
 
 * Once it's ready, you'll be taken to the PR in GitHub, where you can review the changes in the file diff view:
+
+Snyk integrates with your preferred Git repository to scan your manifest files for any new code and potential vulnerabilities whenever you submit a pull request (PR), protecting the security of your code before you ever merge it with the main branch
 
 ![alt tag](https://i.ibb.co/P6bcxkh/snyk-starter-open-source-9.png)
 
@@ -160,8 +162,8 @@ When using the GitHub integration, and if a fix is available, Snyk can automatic
 
 ![alt tag](https://i.ibb.co/SPMCMpP/snyk-starter-open-source-10.png)
 
-* Optionally Now, go ahead and merge the PR!
-* Back in Snyk, we can appreciate that our package.json file has 1 less High Severity Vulnerability if you did fix it
+* Optionally now, go ahead and merge the PR!
+* Back in Snyk we can appreciate that our package.json file has 1 less High Severity Vulnerability if you did fix it
 
 ## Step 5 Test using the CLI
 
@@ -171,6 +173,8 @@ In addition to the Snyk App UI we also have, snyk - CLI and build-time tool to f
  
 1. Install Page - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
 1. Prebuilt Binaries - https://github.com/snyk/snyk/releases
+
+_Note: Make sure you have the following version installed or later_ 
 
 ```bash
 $ snyk --version
@@ -264,11 +268,13 @@ Explore this snapshot at https://app.snyk.io/org/workshops-admin-org/project/770
 Notifications about newly disclosed issues related to these dependencies will be emailed to you.
 ```
 
-* Returning to the Snyk App UI will show our CLI "snyk monitor" result BUT this time we didn't use the GitHub integration
+* Returning to the Snyk App UI will show our CLI "**snyk monitor**" result BUT this time we didn't use the GitHub integration
 
 ![alt tag](https://i.ibb.co/RzNHq8F/snyk-starter-open-source-13.png)
 
 ## Step 6 Failing using Exit Codes
+
+_Note: The script being used here will only run on linux O/S but may work if your using windows cygwin so if your on windows it may work if you use cygwin_
 
 On typical Unix and Linux systems, programs would be able to pass a value to their parent processes while terminating. Values like these are referred to as Exit codes
 As part of Snyk output you must have seen Snyk process terminating with exit codes, we typically see
@@ -307,7 +313,7 @@ $ chmod +x goof-break-build-for-CRITICAL.sh
 
 * Run it from one directory level back from "**goof**" directory source code as shown below. You will see that from the exit code we have identified at least 1 critical issue exists and so we must fail the build
 
-```
+```bash
 pasapicella@192-168-1-113:~/snyk/SE/workshops/snyk-starter-open-source$ d
 total 36168
 drwxr-xr-x  24 pasapicella  staff       768 19 Jul 15:33 goof/
@@ -334,7 +340,7 @@ Build step has to fail we found at least 1 CRITICAL issue with the goof applicat
 
 The Reports area offers data and analytics across all of your projects, displaying historical and aggregated data about projects, issues, dependencies, and licenses. Data in each of the four tabs (seen below) is displayed based on the organization in which you are working, and you can filter this data with different parameters depending on the tab you're viewing
 
-* Click on the "Reports" link at the top of the Snyk App UI page's toolbar. You may need to wait briefly while the report page displays
+* Click on the "**Reports**" link at the top of the Snyk App UI page's toolbar. You may need to wait briefly while the report page displays
 
 ![alt tag](https://i.ibb.co/wNs3JC1/snyk-starter-open-source-11.png)
 

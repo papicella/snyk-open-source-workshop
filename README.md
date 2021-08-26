@@ -193,9 +193,11 @@ be ready to start using snyk.
 If you can't wait use this url:
 https://snyk.io/login?token=ff75a099-4a9f-4b3d-b75c-bf9847672e9c&utm_medium=cli&utm_source=cli&utm_campaign=cli&os=darwin&docker=false
 
-
 Your account has been authenticated. Snyk is now ready to be used.
 ```
+
+_Note: If you are having trouble authenticating via a browser with the Snyk App you can setup authentication using the API token as shown below
+[Authenticate using your API token](https://support.snyk.io/hc/en-us/articles/360004008258-Authenticate-the-CLI-with-your-account#UUID-4f46843c-174d-f448-cadf-893cfd7dd858_section-idm4557419555668831541902780562)_
 
 * Clone your forked repository as shown below. You would use your own GitHub repo here instead of the one shown below
 

@@ -350,7 +350,7 @@ The Reports area offers data and analytics across all of your projects, displayi
 
 Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**goof**" code within VS code while in an IDE
 
-* Install it using the following link - [Install VS Code Snyk Plugin](https://marketplace.visualstudio.com/items?itemName=snyk-security.vscode-vuln-cost)
+* Install it using the following link - [Install VS Code Snyk Plugin](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)
 
 ![alt tag](https://i.ibb.co/zHZ3qxv/snyk-starter-open-source-12.png)
 
